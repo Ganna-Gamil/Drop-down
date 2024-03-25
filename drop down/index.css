@@ -1,0 +1,77 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'poppins';
+}
+body{
+background-color: aliceblue;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+.container{
+    width: 600px;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 2px 16px rgb(122, 118, 118);
+    border-radius: 20px;
+
+}
+.tab_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgba(206, 204, 204, 0.867);
+    position: relative;
+}
+.tab_btn{
+
+font-size: 18px;
+font-weight: 600;
+padding: 18px;
+color: rgb(172, 170, 170);
+border-color: transparent;
+background: none;
+cursor: pointer;
+margin-bottom: 18px;
+padding-bottom: 2px;
+
+
+}
+
+.tab_btn.active{
+    color: rgb(149, 8, 159);
+}
+
+.content_box{
+padding: 20px;
+}
+.content h2 {
+    margin-bottom: 10px;
+}
+.content{
+    display: none;
+    animation: moving .5s ease;
+}
+@keyframes moving {
+
+    from{transform: translateX(50px);opacity: 0;}
+    to{transform: translateX(0px);opacity: 1;}
+}
+.line{
+    position: absolute;
+top: 62px;
+left: 20px;
+width: 90px;
+height: 3px;
+background-color: rgb(149, 8, 159) ;
+border-radius: 10px;
+transition: all .3s ease-in-out;
+}
+.content.active{
+    display: block;
+}
